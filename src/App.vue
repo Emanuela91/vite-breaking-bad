@@ -1,11 +1,14 @@
 <script>
 import HeaderVue from './components/Header.vue';
+import CharactersListVue from './components/CharactersList.vue';
+
 import { store } from './store.js';
 
 export default {
   name: "App",
   components: {
-    HeaderVue
+    HeaderVue,
+    CharactersListVue
   },
 
   data() {
@@ -18,6 +21,9 @@ export default {
 
 <template>
   <HeaderVue msg="Rick and Morty App" />
+  <main>
+    <CharactersListVue />
+  </main>
 </template>
 
 <style lang="scss">
