@@ -20,7 +20,8 @@ export default {
 <template>
     <section class="container">
         <div class="row">
-            <div>
+            <!-- ciclo for per creare tutti i personaggi -->
+            <div v-for="character in store.characterList" :key="character.id">
                 <!-- card importata da single character-->
                 <SingleCharacterVue />
 
