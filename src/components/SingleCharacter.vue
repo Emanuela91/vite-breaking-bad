@@ -2,20 +2,25 @@
 
 export default {
     name: "SingleCharacter",
-    props: [],
+    props: ["info"],
 }
 </script>
 
 <template>
     <!-- card -->
     <div class="text-center">
-        <img src="http://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="">
-        <h4>nome</h4>
-        <div>stato</div>
-        <div>specie</div>
+        <img :src="info.image" :alt="info.name">
+        <h4>{{ info.name }} </h4>
+        <div>{{ info.status }}</div>
+        <div>{{ info.species }}</div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-@use '../style/partials/variables.scss'
+@use '../style/partials/variables.scss';
+
+.text-center {
+    margin: 10px 0;
+
+}
 </style>
